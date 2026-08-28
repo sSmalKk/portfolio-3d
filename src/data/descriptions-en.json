@@ -1,0 +1,20 @@
+{
+  "_comment": "Traducao para ingles das descricoes dos repositorios. O portugues vem do campo `description` no proprio GitHub; aqui fica so o ingles, uma vez. Chave = nome do repositorio. Repo sem entrada aqui cai na descricao do GitHub, entao esquecer de traduzir degrada, nao quebra. Consumido pelo site (useGitHubProjects) e pelo gerador do README do perfil (atualizar_perfil.sh).",
+
+  "project-operations-dashboard": "Collaborative kanban with workspaces, invites and role-based permissions — the rules live in the database as RLS, not in a middleware a direct call could skip",
+  "worldscape-clicker": "Online co-op clicker with authoritative server state and a planet rendered on a 3D globe",
+  "uno-online": "UNO card game with online multiplayer: lobby, room codes, waiting room and a live table",
+  "portfolio-3d": "Personal portfolio built around a 3D scene, with projects, blog, about and contact",
+  "jarvis-ai-system": "Command center for automation agents — seven interface screens",
+  "whatsapp-stock-bot": "Inventory control driven by WhatsApp messages, with an Excel workbook as the source of truth",
+  "invoice-pdf-to-excel": "Pulls invoices and bank statements out of PDF into Excel, then files the documents by issuer and date",
+  "exceljs-styling": "Spreadsheet generation with per-cell control: fonts, fills, borders, alignment, formulas and merged headers",
+  "floating-clock": "Always-on-top desktop clock with timezone support",
+  "minecraft-handcuff-mod": "Handcuff mod for Minecraft, with original models and animations authored in Blockbench",
+  "javascript-freecodecamp": "Solutions to the freeCodeCamp algorithms and data structures challenges",
+  "text-detector": "Text detection from images",
+  "todo-mvc-mongodb": "REST API for tasks in MVC architecture, with authentication, seeders, tests and Docker",
+  "time-tracker": "Work-hour logging backed by a local SQLite database",
+  "marketplace-fullstack": "Specification for a fullstack marketplace: catalog, search, cart, orders and admin",
+  "enterprise-api": "Specification for a professional-grade REST API — no interface, backend only"
+}

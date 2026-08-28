@@ -1,0 +1,48 @@
+# Nesta maquina o git roda com core.autocrlf=true, que reescreve fim de linha
+# em tudo que ele acha que e texto. Em binario isso corrompe o arquivo: os
+# PDFs do curriculo chegaram a ser commitados com a tabela xref quebrada,
+# porque cada \r removido deslocou os offsets seguintes.
+#
+# As linhas abaixo dizem ao git para nao tocar nesses arquivos.
+
+*.pdf      binary
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.webp     binary
+*.ico      binary
+*.mp4      binary
+*.mp3      binary
+*.wav      binary
+*.woff     binary
+*.woff2    binary
+*.ttf      binary
+*.otf      binary
+*.eot      binary
+*.zip      binary
+*.rar      binary
+*.7z       binary
+*.gz       binary
+*.glb      binary
+*.gltf     binary
+*.bin      binary
+*.bbmodel  binary
+*.lockb    binary
+*.xlsx     binary
+*.xls      binary
+*.db       binary
+*.sqlite   binary
+*.sqlite3  binary
+
+# Texto: normaliza para LF no repositorio, seja qual for a maquina.
+*.ts       text eol=lf
+*.tsx      text eol=lf
+*.js       text eol=lf
+*.jsx      text eol=lf
+*.json     text eol=lf
+*.css      text eol=lf
+*.html     text eol=lf
+*.md       text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf

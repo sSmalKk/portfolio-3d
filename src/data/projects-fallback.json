@@ -1,0 +1,269 @@
+[
+  {
+    "name": "portfolio-3d",
+    "description": "Portfólio pessoal construído em torno de uma cena 3D, com projetos, blog, sobre e contato",
+    "html_url": "https://github.com/sSmalKk/portfolio-3d",
+    "language": "TypeScript",
+    "topics": [
+      "portfolio",
+      "react",
+      "threejs",
+      "typescript",
+      "vite"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-25T12:55:33Z"
+  },
+  {
+    "name": "marketplace-fullstack",
+    "description": "Especificação de um marketplace fullstack: catálogo, busca, carrinho, pedidos e administração",
+    "html_url": "https://github.com/sSmalKk/marketplace-fullstack",
+    "language": null,
+    "topics": [
+      "marketplace",
+      "nextjs",
+      "postgresql",
+      "specification",
+      "typescript"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-22T01:32:47Z"
+  },
+  {
+    "name": "enterprise-api",
+    "description": "Especificação de uma API REST de nível profissional — sem interface, só backend",
+    "html_url": "https://github.com/sSmalKk/enterprise-api",
+    "language": null,
+    "topics": [
+      "fastapi",
+      "nestjs",
+      "openapi",
+      "postgresql",
+      "rest-api",
+      "specification"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-22T01:32:52Z"
+  },
+  {
+    "name": "time-tracker",
+    "description": "Registro de horas trabalhadas, com banco SQLite local",
+    "html_url": "https://github.com/sSmalKk/time-tracker",
+    "language": "Python",
+    "topics": [
+      "cli",
+      "python",
+      "sqlite",
+      "time-tracking"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:48Z"
+  },
+  {
+    "name": "todo-mvc-mongodb",
+    "description": "API REST de tarefas em arquitetura MVC, com autenticação, seeders, testes e Docker",
+    "html_url": "https://github.com/sSmalKk/todo-mvc-mongodb",
+    "language": "HTML",
+    "topics": [
+      "docker",
+      "express",
+      "mongodb",
+      "mvc",
+      "nodejs",
+      "rest-api"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:42Z"
+  },
+  {
+    "name": "text-detector",
+    "description": "Detecção de texto em imagem",
+    "html_url": "https://github.com/sSmalKk/text-detector",
+    "language": "TypeScript",
+    "topics": [
+      "image-processing",
+      "ocr",
+      "typescript"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:35Z"
+  },
+  {
+    "name": "javascript-freecodecamp",
+    "description": "Soluções dos desafios de algoritmos e estruturas de dados do freeCodeCamp",
+    "html_url": "https://github.com/sSmalKk/javascript-freecodecamp",
+    "language": null,
+    "topics": [
+      "algorithms",
+      "data-structures",
+      "freecodecamp",
+      "javascript"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:30Z"
+  },
+  {
+    "name": "minecraft-handcuff-mod",
+    "description": "Mod de algemas para Minecraft, com modelos e animações autorais feitos no Blockbench",
+    "html_url": "https://github.com/sSmalKk/minecraft-handcuff-mod",
+    "language": "Java",
+    "topics": [
+      "blockbench",
+      "forge",
+      "java",
+      "minecraft",
+      "mod"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:13Z"
+  },
+  {
+    "name": "floating-clock",
+    "description": "Relógio de desktop sempre visível, com suporte a fusos horários",
+    "html_url": "https://github.com/sSmalKk/floating-clock",
+    "language": "Python",
+    "topics": [
+      "desktop",
+      "python",
+      "timezone",
+      "tkinter"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:18Z"
+  },
+  {
+    "name": "exceljs-styling",
+    "description": "Geração de planilhas com controle por célula: fonte, preenchimento, bordas, alinhamento, fórmula e merge",
+    "html_url": "https://github.com/sSmalKk/exceljs-styling",
+    "language": "TypeScript",
+    "topics": [
+      "exceljs",
+      "nodejs",
+      "spreadsheet",
+      "typescript"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-22T01:45:04Z"
+  },
+  {
+    "name": "invoice-pdf-to-excel",
+    "description": "Extrai faturas e extratos de PDF para Excel e arquiva os documentos por emitente e data",
+    "html_url": "https://github.com/sSmalKk/invoice-pdf-to-excel",
+    "language": "Python",
+    "topics": [
+      "automation",
+      "etl",
+      "excel",
+      "pandas",
+      "pdf",
+      "pdfplumber",
+      "python",
+      "wip"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:07Z"
+  },
+  {
+    "name": "whatsapp-stock-bot",
+    "description": "Controle de estoque por mensagens de WhatsApp, com planilha Excel como fonte da verdade",
+    "html_url": "https://github.com/sSmalKk/whatsapp-stock-bot",
+    "language": "JavaScript",
+    "topics": [
+      "automation",
+      "excel",
+      "express",
+      "inventory",
+      "nodejs",
+      "whatsapp"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:01Z"
+  },
+  {
+    "name": "jarvis-ai-system",
+    "description": "Painel de comando para agentes de automação — sete telas de interface",
+    "html_url": "https://github.com/sSmalKk/jarvis-ai-system",
+    "language": "TypeScript",
+    "topics": [
+      "agents",
+      "automation",
+      "react",
+      "typescript",
+      "ui",
+      "vite",
+      "wip"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:32:25Z"
+  },
+  {
+    "name": "uno-online",
+    "description": "Jogo de UNO com multiplayer online: lobby, código de sala, sala de espera e mesa em tempo real",
+    "html_url": "https://github.com/sSmalKk/uno-online",
+    "language": "TypeScript",
+    "topics": [
+      "card-game",
+      "game",
+      "multiplayer",
+      "react",
+      "realtime",
+      "supabase",
+      "typescript"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-22T01:44:59Z"
+  },
+  {
+    "name": "worldscape-clicker",
+    "description": "Clicker cooperativo online com estado autoritativo no servidor e planeta em globo 3D",
+    "html_url": "https://github.com/sSmalKk/worldscape-clicker",
+    "language": "TypeScript",
+    "topics": [
+      "game",
+      "multiplayer",
+      "react",
+      "realtime",
+      "supabase",
+      "threejs",
+      "typescript",
+      "wip"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-21T23:22:08Z"
+  },
+  {
+    "name": "project-operations-dashboard",
+    "description": "Kanban colaborativo com workspaces, convites e permissões por papel — permissões vivem no banco como RLS, não num middleware",
+    "html_url": "https://github.com/sSmalKk/project-operations-dashboard",
+    "language": "TypeScript",
+    "topics": [
+      "kanban",
+      "postgresql",
+      "rbac",
+      "react",
+      "rls",
+      "supabase",
+      "tanstack-start",
+      "typescript",
+      "wip"
+    ],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-08-22T01:45:36Z"
+  }
+]
