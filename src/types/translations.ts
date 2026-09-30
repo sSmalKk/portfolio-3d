@@ -44,9 +44,7 @@ export interface Translation {
     list: Experience[];
     education: {
       title: string;
-      degree: string;
-      school: string;
-      period: string;
+      list: Array<{ degree: string; school: string; period: string }>;
     };
   };
   projects: {

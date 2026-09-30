@@ -15,7 +15,7 @@ export const en: Translation = {
     about: [
       "I'm a Full Stack Developer and I work across the whole system: database modeling, business rules, API and interface. Where I do my best work is where the problem lives in the rules rather than on the screen: permissions, job queues, third-party API integrations and data that has to stay consistent.",
       "I currently build Publiva, a SaaS in production that generates and publishes social media content. Before that I worked on an AI assistant integrated with WhatsApp at Spacetrack Tecnologia, on the Didder app for Minerva, and on a clinic ERP built on Odoo.",
-      "I hold a technologist degree in Systems Analysis and Development. I also have a design background, which helps me ship polished interfaces.",
+      "I hold a technologist degree in Systems Analysis and Development and a computer technician diploma. I also have a design background, which helps me ship polished interfaces.",
     ],
     github: "GitHub",
     linkedin: "LinkedIn",
@@ -90,9 +90,10 @@ export const en: Translation = {
     ],
     education: {
       title: "Education",
-      degree: "Technologist in Systems Analysis and Development",
-      school: "UNOPAR",
-      period: "2022 – 2025",
+      list: [
+        { degree: "Technologist in Systems Analysis and Development", school: "UNOPAR", period: "2022 – 2025" },
+        { degree: "Computer Technician", school: "CEBRAC", period: "2019" },
+      ],
     },
   },
   projects: {

@@ -15,7 +15,7 @@ export const pt: Translation = {
     about: [
       "Sou Desenvolvedor Full Stack e trabalho no sistema inteiro: modelagem do banco, regras de negócio, API e interface. O que mais faço bem é a parte em que o problema está na regra, e não na tela: permissões, filas de processamento, integrações com APIs externas e dados que precisam continuar consistentes.",
       "Hoje desenvolvo o Publiva, um SaaS em produção que gera e publica conteúdo em redes sociais. Antes, trabalhei em um assistente de IA integrado ao WhatsApp na Spacetrack Tecnologia, no aplicativo Didder pela Minerva e em um ERP para clínicas construído sobre o Odoo.",
-      "Sou tecnólogo em Análise e Desenvolvimento de Sistemas. Também tenho formação em design, o que me ajuda a entregar interfaces bem acabadas.",
+      "Sou tecnólogo em Análise e Desenvolvimento de Sistemas e técnico em Computação. Também tenho formação em design, o que me ajuda a entregar interfaces bem acabadas.",
     ],
     github: "GitHub",
     linkedin: "LinkedIn",
@@ -91,9 +91,10 @@ export const pt: Translation = {
     ],
     education: {
       title: "Formação",
-      degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
-      school: "UNOPAR",
-      period: "2022 – 2025",
+      list: [
+        { degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas", school: "UNOPAR", period: "2022 – 2025" },
+        { degree: "Técnico em Computação", school: "CEBRAC", period: "2019" },
+      ],
     },
   },
   projects: {

@@ -45,9 +45,11 @@ const ExperienceSection = () => {
 
         <div className="mt-12">
           <h3 className="text-xs sm:text-sm tracking-[0.16em] text-white/60 uppercase mb-2">{education.title}</h3>
-          <p className="text-white">
-            {education.degree} <span className="text-white/60">· {education.school} · {education.period}</span>
-          </p>
+          {education.list.map((e) => (
+            <p key={e.degree} className="text-white">
+              {e.degree} <span className="text-white/60">· {e.school} · {e.period}</span>
+            </p>
+          ))}
         </div>
       </div>
     </section>
