@@ -30,6 +30,22 @@ const ProjectsSection = () => {
             <h3 className="text-xl sm:text-2xl font-bold text-white">{destaque.name}</h3>
             <span className="text-xs tracking-[0.14em] uppercase text-white/60">{destaque.label}</span>
           </div>
+          <a
+            href={destaque.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block mb-5 overflow-hidden rounded-lg border border-white/15"
+            onClick={() => trackInteraction('click', 'project-publiva-print')}
+          >
+            <img
+              src="/publiva-dashboard.webp"
+              alt={destaque.screenshotAlt}
+              width={1424}
+              height={646}
+              loading="lazy"
+              className="block w-full h-auto"
+            />
+          </a>
           <p className="text-white/85 leading-relaxed mb-4">{destaque.description}</p>
           <ul className="list-disc pl-5 space-y-1 text-white/75 text-sm mb-4">
             {destaque.highlights.map((h) => (

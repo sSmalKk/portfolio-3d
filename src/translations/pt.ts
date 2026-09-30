@@ -115,6 +115,7 @@ export const pt: Translation = {
       url: "https://publiva.com.br",
       urlLabel: "publiva.com.br",
       note: "Código privado.",
+      screenshotAlt: "Dashboard do Publiva: resumo das campanhas, calendário de postagens e agente de IA",
     },
   },
   contact: {

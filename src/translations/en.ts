@@ -114,6 +114,7 @@ export const en: Translation = {
       url: "https://publiva.com.br",
       urlLabel: "publiva.com.br",
       note: "Private source code.",
+      screenshotAlt: "Publiva dashboard: campaign summary, post calendar and AI agent",
     },
   },
   contact: {

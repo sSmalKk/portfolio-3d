@@ -17,6 +17,7 @@ export interface FeaturedProduct {
   url: string;
   urlLabel: string;
   note: string;
+  screenshotAlt: string;
 }
 
 export interface Translation {
