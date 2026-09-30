@@ -22,7 +22,7 @@ import descricoesEn from '../data/descriptions-en.json';
  */
 
 const USUARIO = 'sSmalKk';
-const CHAVE_CACHE = 'github-repos-v2';
+const CHAVE_CACHE = 'github-repos-v3';
 const VALIDADE_MS = 6 * 60 * 60 * 1000; // 6 horas
 
 export interface Projeto {
@@ -128,21 +128,23 @@ function paraProjeto(repo: RepoGitHub, lang: 'pt' | 'en'): Projeto {
 }
 
 /**
- * O portfólio mostra só o que está pronto.
- *
- * `wip` é trabalho em andamento e `specification` é plano sem código — os dois
- * ficam de fora daqui. Quem quiser o quadro completo, inclusive o inacabado,
- * encontra em github.com/sSmalKk, onde cada projeto aparece com seu estado.
- * Vitrine e inventário são coisas diferentes.
+ * A vitrine é curta e escolhida à mão: poucos projetos que representam bem o
+ * trabalho, na ordem em que devem ser lidos. O texto de cada um continua vindo
+ * do GitHub; aqui fica só a seleção. O resto segue visível em github.com/sSmalKk.
  */
+const VITRINE = [
+  'project-operations-dashboard',
+  'whatsapp-stock-bot',
+  'uno-online',
+];
+
 function pronto(repo: RepoGitHub): boolean {
-  const t = repo.topics ?? [];
-  return !t.includes('wip') && !t.includes('specification');
+  return VITRINE.includes(repo.name);
 }
 
-/** Mais recente primeiro. */
+/** Na ordem da vitrine. */
 function ordenar(repos: RepoGitHub[]): RepoGitHub[] {
-  return [...repos].sort((a, b) => b.pushed_at.localeCompare(a.pushed_at));
+  return [...repos].sort((a, b) => VITRINE.indexOf(a.name) - VITRINE.indexOf(b.name));
 }
 
 function lerCache(): RepoGitHub[] | null {

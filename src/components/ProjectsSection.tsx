@@ -6,22 +6,58 @@ const ProjectsSection = () => {
   const { t } = useLanguage();
   const { trackInteraction } = useAnalytics();
   const { projetos, carregando } = useGitHubProjects();
+  const destaque = t.projects.featured;
 
   const handleProjectClick = (projectId: string, url?: string) => {
     trackInteraction('click', `project-${projectId}`);
     if (url) {
-      window.open(url, '_blank');
+      window.open(url, '_blank', 'noopener,noreferrer');
     }
   };
 
   return (
-    <section className="min-h-[100svh] py-16 sm:py-20 px-4 sm:px-6 z-20">
+    <section id="projetos" className="scroll-mt-20 py-16 sm:py-20 px-4 sm:px-6 z-20">
       <div className="container mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 sm:mb-10 text-center">
           {t.projects.title}
         </h2>
 
-        <p className="text-white/60 text-sm text-center mb-8 sm:mb-12">
+        <article
+          className="max-w-4xl mx-auto mb-10 sm:mb-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-5 sm:p-8"
+          style={{ borderTopColor: '#3178C6', borderTopWidth: 3 }}
+        >
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-3">
+            <h3 className="text-xl sm:text-2xl font-bold text-white">{destaque.name}</h3>
+            <span className="text-xs tracking-[0.14em] uppercase text-white/60">{destaque.label}</span>
+          </div>
+          <p className="text-white/85 leading-relaxed mb-4">{destaque.description}</p>
+          <ul className="list-disc pl-5 space-y-1 text-white/75 text-sm mb-4">
+            {destaque.highlights.map((h) => (
+              <li key={h}>{h}</li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap gap-2 mb-5">
+            {destaque.stack.map((tech) => (
+              <span key={tech} className="bg-white/20 text-white px-2 py-1 rounded text-xs">
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+            <a
+              href={destaque.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white underline hover:text-white/60"
+              onClick={() => trackInteraction('click', 'project-publiva')}
+            >
+              {destaque.urlLabel} →
+            </a>
+            <span className="text-white/50">{destaque.note}</span>
+          </div>
+        </article>
+
+        <p className="text-white/60 text-sm text-center mb-8">
           {t.projects.source}{' '}
           <a
             href="https://github.com/sSmalKk"

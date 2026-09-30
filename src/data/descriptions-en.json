@@ -4,7 +4,7 @@
   "project-operations-dashboard": "Collaborative kanban with workspaces, invites and role-based permissions — the rules live in the database as RLS, not in a middleware a direct call could skip",
   "worldscape-clicker": "Online co-op clicker with authoritative server state and a planet rendered on a 3D globe",
   "uno-online": "UNO card game with online multiplayer: lobby, room codes, waiting room and a live table",
-  "portfolio-3d": "Personal portfolio built around a 3D scene, with projects, blog, about and contact",
+  "portfolio-3d": "Bilingual developer portfolio: about, stack, experience, projects pulled from the GitHub API and contact",
   "jarvis-ai-system": "Command center for automation agents — seven interface screens",
   "whatsapp-stock-bot": "Inventory control driven by WhatsApp messages, with an Excel workbook as the source of truth",
   "invoice-pdf-to-excel": "Pulls invoices and bank statements out of PDF into Excel, then files the documents by issuer and date",

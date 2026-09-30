@@ -4,7 +4,7 @@ const AboutSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="perfil" className="py-16 sm:py-20 px-4 sm:px-6 relative">
+    <section id="perfil" className="scroll-mt-20 py-16 sm:py-20 px-4 sm:px-6 relative">
       <div className="container mx-auto max-w-4xl">
         <p className="text-xs sm:text-sm tracking-[0.16em] text-white/60 uppercase mb-3">
           {t.profile.role}

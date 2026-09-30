@@ -3,6 +3,9 @@ import { useAnalytics } from '../hooks/useAnalytics';
 import { useEffect, useState } from 'react';
 import ContactForm from './ContactForm';
 
+const botao =
+  'w-full sm:w-auto text-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-white hover:bg-white/20 transition-all duration-300';
+
 const HeroSection = () => {
   const { t } = useLanguage();
   const { trackInteraction } = useAnalytics();
@@ -11,11 +14,6 @@ const HeroSection = () => {
   useEffect(() => {
     trackInteraction('page_view', 'hero-section');
   }, []);
-
-  const handleContactClick = () => {
-    trackInteraction('click', 'contact-button');
-    window.open('https://api.whatsapp.com/send/?phone=5561981594849', '_blank');
-  };
 
   const handleFormClick = () => {
     trackInteraction('click', 'contact-form-button');
@@ -31,7 +29,7 @@ const HeroSection = () => {
         <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 min-h-[100svh] flex py-24 sm:py-[80px]">
           <div className="w-full h-full max-w-5xl flex flex-col justify-center gap-5 sm:gap-7">
             <p className="text-xs sm:text-sm md:text-base tracking-[0.12em] sm:tracking-[0.18em] text-white/70 uppercase font-medium">
-              {t.profile.positioning}
+              {t.profile.fullName} · {t.profile.positioning}
             </p>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight max-w-4xl">
@@ -43,17 +41,19 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto pt-1">
-              <button
-                onClick={handleContactClick}
-                className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-white hover:bg-white/20 transition-all duration-300"
+              <a href="#projetos" className={botao} onClick={() => trackInteraction('click', 'hero-projects')}>
+                {t.profile.seeProjects}
+              </a>
+              <a
+                href="https://github.com/sSmalKk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={botao}
+                onClick={() => trackInteraction('click', 'hero-github')}
               >
-                {t.contact.startChat}
-              </button>
-
-              <button
-                onClick={handleFormClick}
-                className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base text-white hover:bg-white/20 transition-all duration-300"
-              >
+                {t.profile.github}
+              </a>
+              <button onClick={handleFormClick} className={botao}>
                 {t.contact.startChat2}
               </button>
             </div>

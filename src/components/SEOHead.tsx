@@ -1,12 +1,15 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
+const FOTO = 'https://avatars.githubusercontent.com/u/49993796?v=4';
+const SITE = 'https://dantastec.netlify.app/';
+
 const SEOHead = () => {
   const { t, language } = useLanguage();
 
   React.useEffect(() => {
     // Title
-    document.title = `${t.profile.name} - ${t.profile.role}`;
+    document.title = `${t.profile.name} — ${t.profile.role}`;
 
     // Description
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -25,7 +28,7 @@ const SEOHead = () => {
     // Open Graph
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
-      ogTitle.setAttribute('content', `${t.profile.name} - ${t.profile.role}`);
+      ogTitle.setAttribute('content', `${t.profile.name} — ${t.profile.role}`);
     }
     const ogDescription = document.querySelector('meta[property="og:description"]');
     if (ogDescription) {
@@ -33,16 +36,16 @@ const SEOHead = () => {
     }
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) {
-      ogUrl.setAttribute('content', window.location.href);
+      ogUrl.setAttribute('content', SITE);
     }
     const ogImage = document.querySelector('meta[property="og:image"]');
     if (ogImage) {
-      ogImage.setAttribute('content', 'https://media.licdn.com/dms/image/v2/D4D03AQESfPbSx0BC3Q/profile-displayphoto-shrink_200_200/B4DZeX9gK_GkAc-/0/1750601174925?e=1756339200&v=beta&t=C2-V2dlnZo-EVgW8c1m2yVJCNWBR-SKrohu_6NdhAOM');
+      ogImage.setAttribute('content', FOTO);
     }
     // Twitter
     const twitterTitle = document.querySelector('meta[property="twitter:title"]');
     if (twitterTitle) {
-      twitterTitle.setAttribute('content', `${t.profile.name} - ${t.profile.role}`);
+      twitterTitle.setAttribute('content', `${t.profile.name} — ${t.profile.role}`);
     }
     const twitterDescription = document.querySelector('meta[property="twitter:description"]');
     if (twitterDescription) {
@@ -50,11 +53,11 @@ const SEOHead = () => {
     }
     const twitterUrl = document.querySelector('meta[property="twitter:url"]');
     if (twitterUrl) {
-      twitterUrl.setAttribute('content', window.location.href);
+      twitterUrl.setAttribute('content', SITE);
     }
     const twitterImage = document.querySelector('meta[property="twitter:image"]');
     if (twitterImage) {
-      twitterImage.setAttribute('content', 'https://media.licdn.com/dms/image/v2/D4D03AQESfPbSx0BC3Q/profile-displayphoto-shrink_200_200/B4DZeX9gK_GkAc-/0/1750601174925?e=1756339200&v=beta&t=C2-V2dlnZo-EVgW8c1m2yVJCNWBR-SKrohu_6NdhAOM');
+      twitterImage.setAttribute('content', FOTO);
     }
     // Canonical
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -63,7 +66,7 @@ const SEOHead = () => {
       (canonical as HTMLLinkElement).rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    (canonical as HTMLLinkElement).setAttribute('href', window.location.href);
+    (canonical as HTMLLinkElement).setAttribute('href', SITE);
 
     // Structured Data
     const existingStructuredData = document.querySelector('#structured-data');
@@ -71,10 +74,14 @@ const SEOHead = () => {
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": t.profile.name,
+      "name": t.profile.fullName,
       "jobTitle": t.profile.role,
       "description": t.profile.description,
-      "url": window.location.origin,
+      "url": SITE,
+      "image": FOTO,
+      "email": `mailto:${t.contact.emailAddress}`,
+      "address": { "@type": "PostalAddress", "addressLocality": "Uberlândia", "addressRegion": "MG", "addressCountry": "BR" },
+      "knowsAbout": ["React", "TypeScript", "JavaScript", "Node.js", "Python", "PostgreSQL", "REST API", "GraphQL"],
       "sameAs": [
         "https://www.linkedin.com/in/gustavodantasdev/",
         "https://github.com/sSmalKk"

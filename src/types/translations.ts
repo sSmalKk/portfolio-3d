@@ -1,6 +1,28 @@
+export interface Experience {
+  role: string;
+  company: string;
+  period: string;
+  location: string;
+  summary: string;
+  highlights: string[];
+  stack: string[];
+}
+
+export interface FeaturedProduct {
+  name: string;
+  label: string;
+  description: string;
+  highlights: string[];
+  stack: string[];
+  url: string;
+  urlLabel: string;
+  note: string;
+}
+
 export interface Translation {
   profile: {
     name: string;
+    fullName: string;
     role: string;
     positioning: string;
     headline: string;
@@ -11,16 +33,32 @@ export interface Translation {
     github: string;
     linkedin: string;
     cv: string;
+    seeProjects: string;
+  };
+  stack: {
+    title: string;
+    groups: Array<{ label: string; items: string[] }>;
+  };
+  experience: {
+    title: string;
+    list: Experience[];
+    education: {
+      title: string;
+      degree: string;
+      school: string;
+      period: string;
+    };
   };
   projects: {
     title: string;
-    viewDemo: string;
     viewCode: string;
     source: string;
+    featured: FeaturedProduct;
   };
   contact: {
     title: string;
     description: string;
+    emailAddress: string;
     startChat: string;
     startChat2: string;
     formTitle: string;
@@ -38,25 +76,5 @@ export interface Translation {
     success: string;
     error: string;
     close: string;
-  };
-  themes: {
-    title: string;
-    viewLive: string;
-    list: Array<{
-      id: string;
-      name: string;
-      description: string;
-      technologies: string[];
-      url: string;
-      gradientClass: string;
-      animationDelay: string;
-    }>;
-  };
-  navigation: {
-    title: string;
-    dragAndDrop: string;
-    clickPlanets: string;
-    clickSatellite: string;
-    useScroll: string;
   };
 }

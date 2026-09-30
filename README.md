@@ -1,73 +1,31 @@
-# Welcome to your Lovable project
+# Portfolio — Gustavo Dantas
 
-## Project info
+Personal portfolio of a Full Stack Developer, live at **[dantastec.netlify.app](https://dantastec.netlify.app)**.
+Bilingual (Portuguese / English), single page, deployed on Netlify.
 
-**URL**: https://lovable.dev/projects/021b9cc7-2e14-4d53-bb2d-9f60de644108
+## What's in it
 
-## How can I edit this code?
+- **About, stack and experience** — static content in `src/translations/{pt,en}.ts`, typed by `src/types/translations.ts`.
+- **Projects** — a short, hand-picked list. The selection lives in `src/hooks/useGitHubProjects.ts` (`VITRINE`); the text of each card comes from the repository itself through the GitHub API, so descriptions are never written twice.
+- **Contact** — a Netlify Forms form plus email, LinkedIn and WhatsApp links.
+- **Résumé** — `public/curriculo_pt.pdf` and `public/curriculo_en.pdf`.
 
-There are several ways of editing your application.
+## Technical notes
 
-**Use Lovable**
+- **GitHub API without a token.** The anonymous API allows 60 requests per hour per IP, so the response is cached in `localStorage` for 6 hours. If the API fails or the limit is reached, the page falls back to the snapshot in `src/data/projects-fallback.json`, so the section is never empty.
+- **One source per text.** Portuguese descriptions come from the repository `description` field on GitHub; English ones from `src/data/descriptions-en.json`, keyed by repository name. A repository without a translation shows the Portuguese text instead of an empty card.
+- **Analytics** — page views and clicks are stored in Supabase (`src/hooks/useAnalytics.ts`). The key in `src/integrations/supabase/client.ts` is the public *anon* key; access is governed by row level security.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/021b9cc7-2e14-4d53-bb2d-9f60de644108) and start prompting.
+## Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+React 18 · TypeScript · Vite · Tailwind CSS · shadcn/ui · Supabase · Netlify
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Running locally
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev      # http://localhost:8080
+npm run build    # production build in dist/
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/021b9cc7-2e14-4d53-bb2d-9f60de644108) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+No environment variables are needed.
