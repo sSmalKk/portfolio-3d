@@ -1,6 +1,5 @@
 {
   "_comment": "Traducao para ingles das descricoes dos repositorios. O portugues vem do campo `description` no proprio GitHub; aqui fica so o ingles, uma vez. Chave = nome do repositorio. Repo sem entrada aqui cai na descricao do GitHub, entao esquecer de traduzir degrada, nao quebra. Consumido pelo site (useGitHubProjects) e pelo gerador do README do perfil (atualizar_perfil.sh).",
-
   "project-operations-dashboard": "Collaborative kanban with workspaces, invites and role-based permissions — the rules live in the database as RLS, not in a middleware a direct call could skip",
   "worldscape-clicker": "Online co-op clicker with authoritative server state and a planet rendered on a 3D globe",
   "uno-online": "UNO card game with online multiplayer: lobby, room codes, waiting room and a live table",
@@ -16,5 +15,6 @@
   "todo-mvc-mongodb": "REST API for tasks in MVC architecture, with authentication, seeders, tests and Docker",
   "time-tracker": "Work-hour logging backed by a local SQLite database",
   "marketplace-fullstack": "Specification for a fullstack marketplace: catalog, search, cart, orders and admin",
-  "enterprise-api": "Specification for a professional-grade REST API — no interface, backend only"
+  "enterprise-api": "Specification for a professional-grade REST API — no interface, backend only",
+  "pdf-invoice-organizer": "CLI that files invoice PDFs into YYYY-MM folders by issuer and exports bank statement debits to Excel (Python, tested)"
 }

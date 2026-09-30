@@ -17,7 +17,7 @@
     ],
     "fork": false,
     "archived": false,
-    "pushed_at": "2026-08-28T15:02:05Z"
+    "pushed_at": "2026-09-30T14:06:23Z"
   },
   {
     "name": "whatsapp-stock-bot",
@@ -34,7 +34,7 @@
     ],
     "fork": false,
     "archived": false,
-    "pushed_at": "2026-08-21T23:32:01Z"
+    "pushed_at": "2026-09-30T14:06:29Z"
   },
   {
     "name": "uno-online",
@@ -52,6 +52,16 @@
     ],
     "fork": false,
     "archived": false,
-    "pushed_at": "2026-08-28T15:02:18Z"
+    "pushed_at": "2026-09-30T14:06:26Z"
+  },
+  {
+    "name": "pdf-invoice-organizer",
+    "description": "CLI that files invoice PDFs into YYYY-MM folders by issuer and exports bank statement debits to Excel (Python, tested)",
+    "html_url": "https://github.com/sSmalKk/pdf-invoice-organizer",
+    "language": "Python",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "pushed_at": "2026-09-30T14:16:50Z"
   }
 ]

@@ -68,6 +68,7 @@ const NOMES: Record<string, string> = {
   'portfolio-3d': 'Portfolio 3D',
   'invoice-pdf-to-excel': 'Invoice PDF to Excel',
   'minecraft-handcuff-mod': 'Minecraft Handcuff Mod',
+  'pdf-invoice-organizer': 'PDF Invoice Organizer',
 };
 const SIGLAS = new Set(['pdf', 'api', 'ui', 'uno', '3d', 'mvc', 'ai']);
 
@@ -136,6 +137,7 @@ const VITRINE = [
   'project-operations-dashboard',
   'whatsapp-stock-bot',
   'uno-online',
+  'pdf-invoice-organizer',
 ];
 
 function pronto(repo: RepoGitHub): boolean {
